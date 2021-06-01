@@ -1,0 +1,3 @@
+! BRN-VERSION 4
+! snr    x(m)     y(m)     q(g/s)   hc(MW)   h(m)    r(m)   s(m)   D_stack(m) V_stack(m/s) Ts_stack(C) dv  cat area   ps length(m) width(m) height(m) orientation(degrees) component
+   0   104064   524551  3.171E-05   0.220   40.0       0   20.0 -999.00 -999.0 -999.00    1    1    1 2100 -999.0 -999.0 -999.0 -999.0             
