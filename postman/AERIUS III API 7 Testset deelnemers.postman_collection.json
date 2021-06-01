@@ -1,0 +1,749 @@
+{
+	"info": {
+		"_postman_id": "b1247e92-e1dd-429e-a672-93edf3c72f76",
+		"name": "AERIUS III API 7 Testset deelnemers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user/generateApiKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{EMAIL_ADDRESS}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/user/generateApiKey",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"user",
+								"generateApiKey"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jobs",
+			"item": [
+				{
+					"name": "jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/jobs",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/jobs/f399b46a-6e10-4354-9a21-cc3c583dbed7",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"jobs",
+								"f399b46a-6e10-4354-9a21-cc3c583dbed7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/jobs/fb10a218-4ce8-4090-accc-d9d357c3ef4a",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"jobs",
+								"fb10a218-4ce8-4090-accc-d9d357c3ef4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jobs cancel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/jobs/7f81f0d0-ae3c-485c-8fea-7d05d7e0bae1/cancel",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"jobs",
+								"7f81f0d0-ae3c-485c-8fea-7d05d7e0bae1",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "receptorSets",
+			"item": [
+				{
+					"name": "receptorSets lijst",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/receptorSets",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"receptorSets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptorSets/addReceptorSet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "filePart",
+									"contentType": "Auto",
+									"type": "file",
+									"src": "I2WQIW9bN/10-receptors.rcp"
+								},
+								{
+									"key": "receptorSet ",
+									"value": "{ \"fileName\": \"10-receptors\", \"name\": \"meetpunten1\", \"expectRcpHeight\": \"false\"}",
+									"contentType": "application/json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/receptorSets",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"receptorSets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptorSets/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/receptorSets/meetpunten1",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"receptorSets",
+								"meetpunten1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "utilty",
+			"item": [
+				{
+					"name": "validate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "463ff9b988fd4cbea9c7a0ebed70e5d7",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "strict",
+									"value": "false",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "filePart",
+									"contentType": "Auto",
+									"type": "file",
+									"src": "xoLOF2kNp/VoorbeeldSituatie.gml"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/utility/validate",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"utility",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validateAndConvert",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "463ff9b988fd4cbea9c7a0ebed70e5d7",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "strict",
+									"value": "false",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "filePart",
+									"contentType": "Auto",
+									"type": "file",
+									"src": "C6gOb7SZv/VoorbeeldSituatie.gml"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/utility/validateAndConvert",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"utility",
+								"validateAndConvert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validate/report",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "463ff9b988fd4cbea9c7a0ebed70e5d7",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "strict",
+									"value": "false",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "filePart",
+									"contentType": "Auto",
+									"type": "file",
+									"src": "o39rqiFc2/VoorbeeldSituatie.gml"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/utility/validate/report",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"utility",
+								"validate",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "analysis",
+			"item": [
+				{
+					"name": "analysis/wnb receptorSet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "options",
+									"value": "{\"name\": \"analysis calculation\",\"calculationYear\": 2021, \"outputType\": \"GML\", \"meteoYear\": \"1995-2004\", \"receptorSetName\": \"meetpunten1\"}",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "fileParts",
+									"contentType": "Auto",
+									"type": "file",
+									"src": "DdVfhrrjn/VoorbeeldSituatie.gml"
+								},
+								{
+									"key": "files",
+									"value": "[{ \"fileName\": \"VoorbeeldSituatie.gml\", \"situation\": \"REFERENCE\"}]",
+									"contentType": "application/json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://connect-masterclass.aerius.nl/api/v7/analysis/wnb",
+							"protocol": "https",
+							"host": [
+								"connect-masterclass",
+								"aerius",
+								"nl"
+							],
+							"path": [
+								"api",
+								"v7",
+								"analysis",
+								"wnb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wnb/calculate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "options",
+							"value": "{\"calculationYear\": 2021, \"outputType\": \"GML\"}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "fileParts",
+							"contentType": "Auto",
+							"type": "file",
+							"src": "OxnAyEPPP/VoorbeeldSituatie.gml"
+						},
+						{
+							"key": "files",
+							"value": "[{ \"fileName\": \"VoorbeeldSituatie.gml\", \"situation\": \"REFERENCE\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://connect-masterclass.aerius.nl/api/v7/wnb/calculate",
+					"protocol": "https",
+					"host": [
+						"connect-masterclass",
+						"aerius",
+						"nl"
+					],
+					"path": [
+						"api",
+						"v7",
+						"wnb",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wnb/calculate CUSTOM_POINTS",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "options",
+							"value": "{\"calculationYear\": 2021, \"outputType\": \"GML\", \"receptorSetName\": \"meetpunten1\"}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "fileParts",
+							"contentType": "Auto",
+							"type": "file",
+							"src": "OxnAyEPPP/VoorbeeldSituatie.gml"
+						},
+						{
+							"key": "files",
+							"value": "[{ \"fileName\": \"VoorbeeldSituatie.gml\", \"situation\": \"REFERENCE\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://connect-masterclass.aerius.nl/api/v7/wnb/calculate",
+					"protocol": "https",
+					"host": [
+						"connect-masterclass",
+						"aerius",
+						"nl"
+					],
+					"path": [
+						"api",
+						"v7",
+						"wnb",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wnb/calculate BRN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "options",
+							"value": "{\"calculationYear\": 2021, \"outputType\": \"GML\"}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "fileParts",
+							"contentType": "Auto",
+							"type": "file",
+							"src": "MURbrYclt/emission.brn"
+						},
+						{
+							"key": "files",
+							"value": "[{ \"fileName\": \"emission.brn\", \"situation\": \"REFERENCE\",\"substance\": \"NH3\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://connect-masterclass.aerius.nl/api/v7/wnb/calculate",
+					"protocol": "https",
+					"host": [
+						"connect-masterclass",
+						"aerius",
+						"nl"
+					],
+					"path": [
+						"api",
+						"v7",
+						"wnb",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wnb/calculate verschil met een bestand Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "options",
+							"value": "{\"calculationYear\": 2021, \"outputType\": \"GML\"}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "fileParts",
+							"contentType": "Auto",
+							"type": "file",
+							"src": "TN7BMBjzJ/Verschil berekening.zip"
+						},
+						{
+							"key": "files",
+							"value": "[{ \"fileName\": \"Verschil berekening.zip\", \"situation\": \"REFERENCE_AND_PROPOSED_ZIP\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://connect-masterclass.aerius.nl/api/v7/wnb/calculate",
+					"protocol": "https",
+					"host": [
+						"connect-masterclass",
+						"aerius",
+						"nl"
+					],
+					"path": [
+						"api",
+						"v7",
+						"wnb",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wnb/calculate verschil met twee lose bestanden",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "options",
+							"value": "{\"calculationYear\": 2021, \"outputType\": \"GML\"}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "fileParts",
+							"contentType": "Auto",
+							"type": "file",
+							"src": [
+								"n3TYila3D/Proposed Landbouw project.gml",
+								"n3TYila3D/Reference Landbouw project.gml"
+							]
+						},
+						{
+							"key": "files",
+							"value": "[{ \"fileName\": \"Reference Landbouw project.gml\", \"situation\": \"REFERENCE\"},{ \"fileName\": \"Proposed Landbouw project.gml\", \"situation\": \"PROPOSED\"}]",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://connect-masterclass.aerius.nl/api/v7/wnb/calculate",
+					"protocol": "https",
+					"host": [
+						"connect-masterclass",
+						"aerius",
+						"nl"
+					],
+					"path": [
+						"api",
+						"v7",
+						"wnb",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
