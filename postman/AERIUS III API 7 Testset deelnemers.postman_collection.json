@@ -639,7 +639,7 @@
 			"response": []
 		},
 		{
-			"name": "wnb/calculate verschil met een bestand Copy",
+			"name": "wnb/calculate verschil met een zip bestand",
 			"request": {
 				"method": "POST",
 				"header": [
