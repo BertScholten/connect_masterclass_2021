@@ -223,7 +223,7 @@
 								},
 								{
 									"key": "receptorSet ",
-									"value": "{ \"fileName\": \"10-receptors\", \"name\": \"meetpunten1\", \"expectRcpHeight\": \"false\"}",
+									"value": "{ \"name\": \"meetpunten1\", \"expectRcpHeight\": \"false\"}",
 									"contentType": "application/json",
 									"type": "text"
 								}
